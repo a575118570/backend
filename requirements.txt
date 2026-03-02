@@ -1,9 +1,9 @@
-fastapi==0.109.0
+fastapi==0.104.1
 uvicorn[standard]==0.27.0
 httpx==0.26.0
 python-multipart==0.0.6
-# FastAPI 0.109 依赖 Pydantic v2，这里保持 2.x；之前的构建错误来自 cryptography，已移除。
-pydantic==2.5.3
+# 使用与本项目代码更兼容的 FastAPI + Pydantic v1 组合，避免 Pydantic v2 的字段类型推断错误。
+pydantic==1.10.13
 python-dotenv==1.0.0
 sqlalchemy==2.0.25
 aiosqlite==0.19.0
