@@ -2,9 +2,10 @@ fastapi==0.109.0
 uvicorn[standard]==0.27.0
 httpx==0.26.0
 python-multipart==0.0.6
-pydantic==2.5.3
+# 在 Render 上构建时 pydantic 2.x 需要编译 pydantic-core，
+# 对默认 Python 版本支持不好，这里固定回稳定的 1.x 版本，避免编译失败。
+pydantic==1.10.14
 python-dotenv==1.0.0
 sqlalchemy==2.0.25
 aiosqlite==0.19.0
 aiomysql==0.2.0
-cryptography==42.0.0
